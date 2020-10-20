@@ -1,13 +1,11 @@
 # Starter Project
 
-Hello Dave!
-
-- [ ] Pre-reqs
+- [x] Pre-reqs
   - What has Tom learnt so far?
   - What does he want to be able to do?
   - Editor? Terminal? Git? Chrome?
 
-- [ ] Initialise repository
+- [x] Initialise repository
   - Create repo on github
   - Initialise repo locally
   - the first commit! 🎉
