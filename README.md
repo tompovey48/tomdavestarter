@@ -11,7 +11,7 @@
   - the first commit! 🎉
   - push to github
 
-- [ ] Render todo list
+- [x] Render todo list
   - Add index.html
   - add some todo items to the HTML
   - refactor the todo items into a Javascript array
