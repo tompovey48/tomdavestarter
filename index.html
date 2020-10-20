@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script>
+      window.addEventListener('load', () => {
+        let todos = [
+          'Order dinner',
+          'Eat dinner',
+          'Go to sleep',
+          'wake up'
+        ];
+
+        document.querySelector('.todo-list').innerHTML = `${
+          todos
+            .map(todo => `<li>${todo}</li>`)
+            .join('\n')
+        }`
+
+      }, false);
+    </script>
+  </head>
+  <body>
+    <h1>Tom's TODO app</h1>
+    <ul class="todo-list">
+    </ul>
+  </body>
+</html>
