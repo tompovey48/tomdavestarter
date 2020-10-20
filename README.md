@@ -1,5 +1,7 @@
 # Starter Project
 
+Hello Tom!
+
 - [ ] Pre-reqs
   - What has Tom learnt so far?
   - What does he want to be able to do?
