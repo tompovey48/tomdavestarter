@@ -1,6 +1,6 @@
 # Starter Project
 
-Hello Tom!
+Hello Dave!
 
 - [ ] Pre-reqs
   - What has Tom learnt so far?
