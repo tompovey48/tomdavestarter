@@ -9,18 +9,39 @@
           'wake up'
         ];
 
-        document.querySelector('.todo-list').innerHTML = `${
+        document.querySelector('.todo-list').innerHTML = 
+        `${
           todos
             .map(todo => `<li>${todo}</li>`)
             .join('\n')
         }`
 
       }, false);
+
+      function newListItem() {
+        
+        e.preventDefault();
+        inputText = document.getElementById('text').value;
+        todos.push(inputText);
+        console.log(todos);
+        return false;
+        
+      }
+
     </script>
   </head>
   <body>
     <h1>Tom's TODO app</h1>
     <ul class="todo-list">
     </ul>
+
+    <form onsubmit="return newListItem()">
+      <input type="text" id="text">
+      <input type="submit" value="New To Do">
+      </form>
+
+      <script>
+        
+      </script>
   </body>
 </html>
