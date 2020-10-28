@@ -1,13 +1,19 @@
 <html>
   <head>
     <script>
-      window.addEventListener('load', () => {
-        let todos = [
-          'Order dinner',
-          'Eat dinner',
-          'Go to sleep',
-          'wake up'
+       
+       todos = [
+          'buy food',
+          'eat food',
+          'cook food'
         ];
+    
+       
+      
+      function newListItem() {
+       
+        inputText = document.getElementById('text').value;
+        todos.push(inputText);
 
         document.querySelector('.todo-list').innerHTML = 
         `${
@@ -16,17 +22,11 @@
             .join('\n')
         }`
 
-      }, false);
-
-      function newListItem() {
-        
-        e.preventDefault();
-        inputText = document.getElementById('text').value;
-        todos.push(inputText);
         console.log(todos);
         return false;
-        
-      }
+      };
+
+   
 
     </script>
   </head>
@@ -37,7 +37,9 @@
 
     <form onsubmit="return newListItem()">
       <input type="text" id="text">
-      <input type="submit" value="New To Do">
+      <a href="#"><input type="submit" value="New To Do">
+      </a>
+
       </form>
 
       <script>
