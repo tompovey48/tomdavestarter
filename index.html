@@ -1,33 +1,43 @@
 <html>
   <head>
     <script>
-       
-       todos = [
-          'buy food',
-          'eat food',
-          'cook food'
-        ];
-    
-       
-      
-      function newListItem() {
-       
-        inputText = document.getElementById('text').value;
-        todos.push(inputText);
+      todos = [
+        'buy food',
+        'eat food',
+        'cook food'
+      ];
 
-        document.querySelector('.todo-list').innerHTML = 
-        `${
+      function renderTodos() {
+        document.querySelector('.todo-list').innerHTML =
           todos
             .map(todo => `<li>${todo}</li>`)
             .join('\n')
-        }`
+      }
 
-        console.log(todos);
+      window.addEventListener('load', () => {
+        renderTodos()
+
+        document.querySelector('.add-todo')
+          .addEventListener('click', newListItem)
+      }, false)
+
+      function getNewTodo() {
+        return document.getElementById('text').value
+      }
+
+      function addToList(todo) {
+        todos.push(todo);
+      }
+
+      function newListItem() {
+        const inputText = getNewTodo()
+
+        addToList(inputText)
+
+        renderTodos()
+
         return false;
       };
-
-   
-
     </script>
   </head>
   <body>
@@ -35,15 +45,11 @@
     <ul class="todo-list">
     </ul>
 
-    <form onsubmit="return newListItem()">
       <input type="text" id="text">
-      <a href="#"><input type="submit" value="New To Do">
-      </a>
-
-      </form>
+      <button class="add-todo">New To do</button>
 
       <script>
-        
+
       </script>
   </body>
 </html>
