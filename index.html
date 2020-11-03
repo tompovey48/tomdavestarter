@@ -1,26 +1,55 @@
 <html>
   <head>
     <script>
-      window.addEventListener('load', () => {
-        let todos = [
-          'Order dinner',
-          'Eat dinner',
-          'Go to sleep',
-          'wake up'
-        ];
+      todos = [
+        'buy food',
+        'eat food',
+        'cook food'
+      ];
 
-        document.querySelector('.todo-list').innerHTML = `${
+      function renderTodos() {
+        document.querySelector('.todo-list').innerHTML =
           todos
             .map(todo => `<li>${todo}</li>`)
             .join('\n')
-        }`
+      }
 
-      }, false);
+      window.addEventListener('load', () => {
+        renderTodos()
+
+        document.querySelector('.add-todo')
+          .addEventListener('click', newListItem)
+      }, false)
+
+      function getNewTodo() {
+        return document.getElementById('text').value
+      }
+
+      function addToList(todo) {
+        todos.push(todo);
+      }
+
+      function newListItem() {
+        const inputText = getNewTodo()
+
+        addToList(inputText)
+
+        renderTodos()
+
+        return false;
+      };
     </script>
   </head>
   <body>
     <h1>Tom's TODO app</h1>
     <ul class="todo-list">
     </ul>
+
+      <input type="text" id="text">
+      <button class="add-todo">New To do</button>
+
+      <script>
+
+      </script>
   </body>
 </html>
